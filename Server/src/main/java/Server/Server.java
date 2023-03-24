@@ -9,11 +9,13 @@ public class Server {
     private DatagramSocket socket;
     private DatagramPacket in, out;
     private byte[] buf;
+    private FileManager fileManager;
 
     public Server(int port) {
         this.buf = new byte[512];
         this.in = new DatagramPacket(buf, buf.length);
         this.out = new DatagramPacket(buf, buf.length);
+        this.fileManager = new FileManager();
 
         // Ew nested try/catch statements
         try {
