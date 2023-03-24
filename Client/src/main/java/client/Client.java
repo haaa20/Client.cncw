@@ -1,8 +1,6 @@
 package client;
-
 import java.io.IOException;
 import java.net.*;
-
 public class Client {
     private DatagramSocket socket;
     private DatagramPacket in, out;
